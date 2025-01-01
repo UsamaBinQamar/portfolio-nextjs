@@ -1,11 +1,16 @@
-import React from "react";
+import React from 'react'
+import Intro from '@/components/intro'   
 
-export const Home = () => {
+const page = () => {
   return (
     <section className="py-24">
-      <div className="container">
-        <h1 className="text-5xl font-bold">Portfolio</h1>
-      </div>
-    </section>
-  );
-};
+    <div className="container max-w-3xl">
+     <Intro/>
+     </div>
+  </section>
+  )
+}
+
+export default page
+
+
