@@ -1,22 +1,19 @@
-import React from 'react'
-import Intro from '@/components/intro'   
-import { MDXRemote } from 'next-mdx-remote/rsc'
+import Intro from '@/components/intro'
+import NewsletterForm from '@/components/newsletter-form'
+import RecentPosts from '@/components/recent-posts'
+import RecentProjects from '@/components/recent-projects'
 
-const page = () => {
-  const content = `
-  #  I'm a software engineer based in Lahore, Pakistan. I'm passionate about learning new technologies and sharing knowledge with others.
-  `
+export default function Home() {
   return (
-    <section className="py-24">
-    <div className="container max-w-3xl">
-     <Intro/>
+    <section className='pb-24 pt-40'>
+      <div className='container max-w-3xl'>
+        <Intro />
 
-     <MDXRemote source={content} />
-     </div>
-  </section>
+        <RecentPosts />
+        <RecentProjects />
+
+        <NewsletterForm />
+      </div>
+    </section>
   )
 }
-
-export default page
-
-
